@@ -1,0 +1,60 @@
+:root{--ink:#161212;--cream:#faf5f1;--rose:#d98a77;--rose-d:#b9604d;--line:#e6d9d2;--soft:#f3e9e3}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(250,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+header img{height:38px;display:block}
+nav{display:flex;gap:26px;font-size:15px;letter-spacing:.04em}
+nav a{text-decoration:none}nav a:hover{color:var(--rose-d)}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:13px 26px;font-size:15px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink)}
+.btn:hover{background:var(--rose-d);border-color:var(--rose-d)}
+.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{color:#fff}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.hero .t{display:flex;flex-direction:column;justify-content:center;padding:64px max(20px,calc((100vw - 1080px)/2)) 64px max(20px,calc((100vw - 1080px)/2))}
+.hero .p{background:url(images/salon.jpg) center/cover}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-d);margin-bottom:18px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.12}
+h1{font-size:clamp(38px,5vw,60px);margin-bottom:22px}
+h2{font-size:clamp(30px,4vw,42px);margin-bottom:14px}
+.lead{font-size:19px;max-width:30em;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:80px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.badges span{border:1px solid var(--rose);color:var(--rose-d);padding:5px 14px;font-size:14px;letter-spacing:.06em}
+.prices{background:#fff}
+.pgrid{columns:2;column-gap:64px;margin-top:36px}
+.pcat{break-inside:avoid;margin-bottom:38px}
+.pcat h3{font-size:28px;color:var(--rose-d);border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:8px}
+.pcat li{list-style:none;display:flex;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line);font-size:16px}
+.pcat li span:first-child{flex:1}.pcat li b{font-weight:500;white-space:nowrap}
+.pcat small{display:block;font-size:14px;color:#6b5f5a;margin-top:6px}
+.note{font-size:15px;color:#6b5f5a;margin-top:6px}
+.team ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.team li{background:#fff;border:1px solid var(--line);padding:22px}
+.team li b{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;display:block}
+.team li span{font-size:15px;color:#6b5f5a}
+.brands{background:var(--soft)}
+.contact{background:var(--ink);color:#fff}
+.contact h2{color:#fff}.contact .kicker{color:var(--rose)}
+.contact a{color:#fff}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.big{font-family:"Cormorant Garamond",serif;font-size:36px;text-decoration:none;display:block;margin:6px 0 18px}
+.contact .btn{background:var(--rose);border-color:var(--rose);color:var(--ink)}
+.contact .btn:hover{background:#fff;border-color:#fff}
+.map{width:100%;height:300px;border:0;filter:grayscale(.4)}
+footer{background:#0d0a0a;color:#9c8f89;font-size:13px;text-align:center;padding:18px}
+footer a{color:#cdbfb8}
+.callbar{display:none}
+@media(max-width:800px){
+ nav{display:none}
+ .hero{grid-template-columns:1fr}.hero .p{order:-1;height:260px}.hero .t{padding:40px 20px}
+ section{padding:56px 0}.two,.cgrid{grid-template-columns:1fr;gap:30px}.pgrid{columns:1}
+ .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20}
+ .callbar a{flex:1;text-align:center;padding:14px;text-decoration:none;background:var(--ink);color:#fff;font-size:15px;letter-spacing:.06em}
+ .callbar a+a{background:var(--rose);color:var(--ink)}
+ body{padding-bottom:50px}
+}
